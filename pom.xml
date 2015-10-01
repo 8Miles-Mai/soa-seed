@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<name>gm_soa_seed</name>
-	<groupId>com.gm</groupId>
-	<artifactId>gm_soa_seed</artifactId>
+	<name>soa_seed</name>
+	<groupId>com.miles</groupId>
+	<artifactId>soa_seed</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<url>http://maven.apache.org</url>
@@ -403,16 +403,16 @@
 				<configuration>
 					<classifier>client</classifier>
 					<includes>
-						<include>com/gm/trade/base/exception/*</include>
-						<include>com/gm/trade/base/util/*</include>
-						<include>com/gm/trade/base/vo/*</include>
-						<include>com/gm/trade/debug/annotation/*</include>
-						<include>com/gm/trade/**/model/*</include>
-						<include>com/gm/trade/**/remote/*</include>
-						<include>com/gm/trade/**/vo/*</include>
-						<include>com/gm/trade/**/dto/*</include>
-						<include>com/gm/trade/**/constant*/*</include>				
-						<include>com/gm/trade/**/util*/*</include>				
+						<include>com/miles/seed/base/exception/*</include>
+						<include>com/miles/seed/base/util/*</include>
+						<include>com/miles/seed/base/vo/*</include>
+						<include>com/miles/seed/debug/annotation/*</include>
+						<include>com/miles/seed/**/model/*</include>
+						<include>com/miles/seed/**/remote/*</include>
+						<include>com/miles/seed/**/vo/*</include>
+						<include>com/miles/seed/**/dto/*</include>
+						<include>com/miles/seed/**/constant*/*</include>				
+						<include>com/miles/seed/**/util*/*</include>				
 					</includes>
 				</configuration>
 				<executions>
