@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	
+	<!-- 以下是优化方案，未全部调整完毕，暂时不使用 -->
+	<!-- 可参考：http://snowolf.iteye.com/blog/703732 -->
+	<!-- 	
+	<bean id="multiThreadedHttpConnectionManager" class="org.apache.commons.httpclient.MultiThreadedHttpConnectionManager">
+		<property name="params">
+			<bean class="org.apache.commons.httpclient.params.HttpConnectionManagerParams">
+				连接池中最多400个链接
+				<property name="maxTotalConnections" value="400" /> 
+				最多同时200个请求链接到同一个目标服务器
+				<property name="defaultMaxConnectionsPerHost" value="50" />
+				5000ms 内如果没有返回请求的结果，则超时处理(注意目标应用需要做事务超时处理，并且时间一定要小于该值，都则可能会造成数据异常)
+				<property name="soTimeout" value="5000" />	
+				<property name="connectionTimeout" value="2000" />
+			</bean>
+		</property>
+	</bean>
+	<bean id="httpInvokerRequestExecutor" class="org.springframework.remoting.httpinvoker.CommonsHttpInvokerRequestExecutor">    
+		<property name="httpClient">
+			<bean class="org.apache.commons.httpclient.HttpClient">
+				<constructor-arg ref="multiThreadedHttpConnectionManager" />
+			</bean>
+		</property>
+	</bean>
+	-->
+</beans>

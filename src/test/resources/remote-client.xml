@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>remote-client.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="hscodeService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${soa.remoting}/hscodeService" />
+		<property name="serviceInterface" value="com.gm.trade.hscode.remote.HscodeServiceRemote" />
+	</bean>
+	<bean id="spuService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${soa.remoting}/spuService" />
+		<property name="serviceInterface" value="com.gm.trade.spu.remote.SPUServiceRemote" />
+	</bean>
+	<bean id="attributeService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+		<property name="serviceUrl" value="${soa.remoting}/attributeService" />
+		<property name="serviceInterface" value="com.gm.trade.attribute.remote.AttributeServiceRemote" />
+	</bean>
+</beans>

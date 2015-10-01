@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd 
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+		http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/jee
+		http://www.springframework.org/schema/jee/spring-jee-3.0.xsd
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util-3.0.xsd
+	">
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<!-- ******************************* Mysql ****************************************** -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="${mysql.driverClassName}"></property>
+		<property name="url" value="${mysql.tarde.erp.db.url}"></property>
+		<property name="username" value="${mysql.tarde.erp.db.username}"></property>
+		<property name="password" value="${mysql.tarde.erp.db.password}"></property>		
+		<!-- 连接池启动时的初始值 -->
+		<property name="initialSize" value="${mysql.tarde.erp.db.initialSize}"></property>
+		<!-- 连接池支持的最大连接数 -->
+		<property name="maxActive" value="${mysql.tarde.erp.db.maxActive}"></property>
+		<!-- 连接池中的最大空闲连接数 -->
+		<property name="maxIdle" value="${mysql.tarde.erp.db.maxIdle}"></property>
+		<!-- 连接池中的最小空闲连接数 -->
+		<property name="minIdle" value="${mysql.tarde.erp.db.maxIdle}"></property>
+		<!-- 连接池中连接用完时，新的请求等待时间 -->
+		<property name="maxWait" value="${mysql.tarde.erp.db.maxWait}"></property>
+		
+        <property name="validationQuery" value="SELECT 1"></property>
+		
+		<property name="testWhileIdle" value="true"></property>
+		<property name="testOnBorrow" value="true"></property>
+		<property name="timeBetweenEvictionRunsMillis" value="3600000"></property>
+		
+		<property name="removeAbandoned" value="true"></property>
+        <property name="removeAbandonedTimeout" value="60" ></property>
+        <property name="logAbandoned" value="true"></property>
+        
+        <!-- 
+		        数据库并不对应用与数据库间的连接超时进行处理。 
+			JDBC的socket timeout在数据库被突然停掉或是发生网络错误（由于设备故障等原因）时十分重要。
+			由于TCP/IP的结构原因，socket没有办法探测到网络错误，因此应用也无法主动发现数据库连接断开。
+			如果没有设置socket timeout的话，应用在数据库返回结果前会无期限地等下去，这种连接被称为dead connection
+			【注意】：不同的数据库驱动，参数名可能不一致
+			相关 JDBC超时设置的详情，见：http://www.importnew.com/2466.html
+         -->
+        <!-- socketTimeout建立连接的timeout；connectTimeout 读写 timeout, 必须大于 query timeout-->
+        <property name="connectionProperties" value="socketTimeout=1500;connectTimeout=5000"></property>
+	</bean>
+	
+	<!-- 
+	<bean id="tardeDataSource" class="com.p6spy.engine.spy.P6DataSource" > 
+		<constructor-arg> 
+		    <ref local="tardeDataSourceTarget"/>
+		</constructor-arg> 
+	</bean> 
+	-->
+    
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">  
+       <property name="dataSource" ref="dataSource"/>  
+       <!-- 
+       		事务时间，即需要在指定时间内完成事务，否则抛出 transaction time out 异常 
+       		tx:method 中可以对特定的方法设置个性化的超时时间
+       -->
+       <property name="defaultTimeout" value="3"></property>      
+    </bean> 
+    
+    <!-- 
+		1. 场景一，当单独调用 getUser 方法的时候，我们希望该方法不使用事务，以提高性能. 这时候，我们可以单独配置 propagation="SUPPORTS" 或 propagation="NOT_SUPPORTED" 即可
+		2. 场景二，当我们在一个 insertUser中（事务t1），需要读取 insert 后的数据，此时如果 使用  NOT_SUPPORTED， 则是无法获取到事务(t1)中未 commit的数据， 而 SUPPORTS 可以。因此基于 1、2，我们使用 SUPPORTS
+	-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="find*" 	propagation="SUPPORTS" />
+            <tx:method name="get*" 		propagation="SUPPORTS" />
+            <tx:method name="query*" 	propagation="SUPPORTS" />
+            <tx:method name="load*" 	propagation="SUPPORTS" />
+            <tx:method name="is*" 		propagation="SUPPORTS" />
+            <tx:method name="has*" 		propagation="SUPPORTS" />
+            <tx:method name="can*" 		propagation="SUPPORTS" />
+            <tx:method name="*" propagation="REQUIRED" read-only="false" rollback-for="Exception"/>
+        </tx:attributes>
+    </tx:advice>
+    
+     <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.gm..service.*Service.*(..))" />
+    </aop:config>
+    
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+		<constructor-arg ref="dataSource" />
+		<!-- 单次query的时间（也叫 statement timeout） -->
+		<property name="queryTimeout" value="2" />
+	</bean>
+	
+	<bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+		<constructor-arg ref="jdbcTemplate" />
+	</bean>
+</beans>
