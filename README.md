@@ -36,7 +36,7 @@
   
 	- [参考规范文件][spec_JAVA]
 [spec_JAVA]: http://gitlab.globalmarket.com/spec/gmc/blob/master/JAVA%E7%BC%96%E7%A8%8B%E8%A7%84%E8%8C%83.md
-	- 示例代码见: `com.gm.trade.manufactory.*`
+	- 示例代码见: `com.miles.seed.manufactory.*`
 
 	
 

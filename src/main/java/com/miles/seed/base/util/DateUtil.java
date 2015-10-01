@@ -1,13 +1,13 @@
-package com.gm.trade.base.util;
+package com.miles.seed.base.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.gm.trade.base.exception.GMSOAException;
-import com.gm.trade.base.exception.GMSOAExceptionAssert;
-import com.gm.trade.base.exception.GMSOAExceptionCode;
-import com.gm.trade.base.exception.GMSOAExceptionType;
+import com.miles.seed.base.exception.GMSOAException;
+import com.miles.seed.base.exception.GMSOAExceptionAssert;
+import com.miles.seed.base.exception.GMSOAExceptionCode;
+import com.miles.seed.base.exception.GMSOAExceptionType;
 
 
 public abstract class DateUtil {

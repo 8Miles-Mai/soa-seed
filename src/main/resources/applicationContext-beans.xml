@@ -20,7 +20,7 @@
 		
 	<context:annotation-config />
 	
-	<context:component-scan base-package="com.gm.trade" >
+	<context:component-scan base-package="com.miles.seed" >
 		<context:exclude-filter type="regex" expression=".*Controller$" />
 		<context:exclude-filter type="regex" expression=".*Interceptor$" />
 	</context:component-scan>

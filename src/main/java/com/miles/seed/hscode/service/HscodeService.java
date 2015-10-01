@@ -1,4 +1,4 @@
-package com.gm.trade.hscode.service;
+package com.miles.seed.hscode.service;
 
 import java.util.List;
 import java.util.Map;
@@ -14,13 +14,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.gm.trade.base.exception.GMSOAExceptionAssert;
-import com.gm.trade.base.exception.GMSOAExceptionCode;
-import com.gm.trade.debug.annotation.APICategory;
-import com.gm.trade.debug.annotation.APIMethod;
-import com.gm.trade.debug.annotation.APIParam;
-import com.gm.trade.debug.annotation.APIUser;
-import com.gm.trade.hscode.remote.HscodeServiceRemote;
+import com.miles.seed.base.exception.GMSOAExceptionAssert;
+import com.miles.seed.base.exception.GMSOAExceptionCode;
+import com.miles.seed.debug.annotation.APICategory;
+import com.miles.seed.debug.annotation.APIMethod;
+import com.miles.seed.debug.annotation.APIParam;
+import com.miles.seed.debug.annotation.APIUser;
+import com.miles.seed.hscode.remote.HscodeServiceRemote;
 import com.mongodb.BasicDBObject;
 
 @Controller("hscodeService")

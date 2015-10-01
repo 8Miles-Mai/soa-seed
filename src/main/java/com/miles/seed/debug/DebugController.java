@@ -1,4 +1,4 @@
-package com.gm.trade.debug;
+package com.miles.seed.debug;
 
 import java.util.List;
 
@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.gm.trade.debug.vo.ApiParam;
+import com.miles.seed.debug.vo.ApiParam;
 
 @Controller
 public class DebugController {

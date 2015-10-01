@@ -1,4 +1,4 @@
-package com.gm.trade.base.exception;
+package com.miles.seed.base.exception;
 
 /**
  * SOA统一异常类

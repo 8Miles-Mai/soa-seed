@@ -1,6 +1,6 @@
 //Copyright Sun Microsystems Inc. 2004 - 2005.
 
-package com.gm.trade.debug.annotation;
+package com.miles.seed.debug.annotation;
 
 import java.lang.annotation.*;
 import static java.lang.annotation.ElementType.*;

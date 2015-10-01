@@ -14,14 +14,14 @@
 
 	<bean id="hscodeService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
 		<property name="serviceUrl" value="${soa.remoting}/hscodeService" />
-		<property name="serviceInterface" value="com.gm.trade.hscode.remote.HscodeServiceRemote" />
+		<property name="serviceInterface" value="com.miles.seed.hscode.remote.HscodeServiceRemote" />
 	</bean>
 	<bean id="spuService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
 		<property name="serviceUrl" value="${soa.remoting}/spuService" />
-		<property name="serviceInterface" value="com.gm.trade.spu.remote.SPUServiceRemote" />
+		<property name="serviceInterface" value="com.miles.seed.spu.remote.SPUServiceRemote" />
 	</bean>
 	<bean id="attributeService" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
 		<property name="serviceUrl" value="${soa.remoting}/attributeService" />
-		<property name="serviceInterface" value="com.gm.trade.attribute.remote.AttributeServiceRemote" />
+		<property name="serviceInterface" value="com.miles.seed.attribute.remote.AttributeServiceRemote" />
 	</bean>
 </beans>

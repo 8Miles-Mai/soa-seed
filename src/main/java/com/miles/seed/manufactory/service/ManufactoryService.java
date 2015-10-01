@@ -1,17 +1,17 @@
-package com.gm.trade.manufactory.service;
+package com.miles.seed.manufactory.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.gm.trade.base.vo.PaginationVO;
-import com.gm.trade.debug.annotation.APICategory;
-import com.gm.trade.debug.annotation.APIMethod;
-import com.gm.trade.debug.annotation.APIUser;
-import com.gm.trade.manufactory.dao.ManufactoryDao;
-import com.gm.trade.manufactory.remote.ManufactoryServiceRemote;
-import com.gm.trade.manufactory.vo.ManufactoryVO;
+import com.miles.seed.base.vo.PaginationVO;
+import com.miles.seed.debug.annotation.APICategory;
+import com.miles.seed.debug.annotation.APIMethod;
+import com.miles.seed.debug.annotation.APIUser;
+import com.miles.seed.manufactory.dao.ManufactoryDao;
+import com.miles.seed.manufactory.remote.ManufactoryServiceRemote;
+import com.miles.seed.manufactory.vo.ManufactoryVO;
 
 @Controller("manufactoryService")
 public class ManufactoryService implements ManufactoryServiceRemote {

@@ -1,4 +1,4 @@
-package com.gm.trade.base.init;
+package com.miles.seed.base.init;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;

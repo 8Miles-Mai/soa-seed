@@ -21,16 +21,16 @@
 		">
 
 	<context:annotation-config />
-	<context:component-scan base-package="com.gm.trade"/>
+	<context:component-scan base-package="com.miles.seed"/>
 	
 	<!-- trade -->
 	<bean name="/hscodeService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
 		<property name="service" ref="hscodeService" />
-		<property name="serviceInterface" value="com.gm.trade.hscode.remote.HscodeServiceRemote" />
+		<property name="serviceInterface" value="com.miles.seed.hscode.remote.HscodeServiceRemote" />
 	</bean>
 	<bean name="/manufactoryService" class="org.springframework.remoting.httpinvoker.HttpInvokerServiceExporter">
 		<property name="service" ref="manufactoryService" />
-		<property name="serviceInterface" value="com.gm.trade.manufactory.remote.ManufactoryServiceRemote" />
+		<property name="serviceInterface" value="com.miles.seed.manufactory.remote.ManufactoryServiceRemote" />
 	</bean>
 	
 	<aop:aspectj-autoproxy proxy-target-class="false" />

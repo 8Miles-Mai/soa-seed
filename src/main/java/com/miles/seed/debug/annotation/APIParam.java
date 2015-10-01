@@ -1,4 +1,4 @@
-package com.gm.trade.debug.annotation;
+package com.miles.seed.debug.annotation;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 

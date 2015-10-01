@@ -18,7 +18,7 @@
 		http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 	
 	<!-- 定时任务控制切面逻辑 -->
-    <bean id="scheduleCtrlAspect" class="com.gm.trade.aspect.ScheduleCtrlAspect">
+    <bean id="scheduleCtrlAspect" class="com.miles.seed.aspect.ScheduleCtrlAspect">
     	<!-- 环境变量名称(可选), 用于设置是否执行定时器，默认为: com.gm.run.task, 建议格式com.gm.projectname.run.task --> 
     	<property name="envVarName" value="com.gm.projectname.run.task" />
     	<!-- 是否记录定时任务执行时间(可选),默认为: true --> 

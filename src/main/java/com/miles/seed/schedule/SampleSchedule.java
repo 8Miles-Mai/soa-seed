@@ -1,4 +1,4 @@
-package com.gm.trade.schedule;
+package com.miles.seed.schedule;
 
 import org.springframework.stereotype.Component;
 

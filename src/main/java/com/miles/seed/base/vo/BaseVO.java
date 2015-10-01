@@ -1,4 +1,4 @@
-package com.gm.trade.base.vo;
+package com.miles.seed.base.vo;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.gm.trade.base.exception;
+package com.miles.seed.base.exception;
 
 /**
  * 异常类型

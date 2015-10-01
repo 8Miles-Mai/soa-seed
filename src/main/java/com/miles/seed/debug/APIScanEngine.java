@@ -1,4 +1,4 @@
-package com.gm.trade.debug;
+package com.miles.seed.debug;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -25,16 +25,16 @@ import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.gm.trade.debug.annotation.APIField;
-import com.gm.trade.debug.annotation.APIMethod;
-import com.gm.trade.debug.annotation.APIParam;
-import com.gm.trade.debug.annotation.APIUser;
-import com.gm.trade.debug.annotation.APIValueObject;
-import com.gm.trade.debug.vo.ApiField;
-import com.gm.trade.debug.vo.ApiMethod;
-import com.gm.trade.debug.vo.ApiParam;
-import com.gm.trade.debug.vo.ApiReturn;
-import com.gm.trade.debug.vo.ApiValueObject;
+import com.miles.seed.debug.annotation.APIField;
+import com.miles.seed.debug.annotation.APIMethod;
+import com.miles.seed.debug.annotation.APIParam;
+import com.miles.seed.debug.annotation.APIUser;
+import com.miles.seed.debug.annotation.APIValueObject;
+import com.miles.seed.debug.vo.ApiField;
+import com.miles.seed.debug.vo.ApiMethod;
+import com.miles.seed.debug.vo.ApiParam;
+import com.miles.seed.debug.vo.ApiReturn;
+import com.miles.seed.debug.vo.ApiValueObject;
 
 @Service("APIScanEngine")
 public class APIScanEngine {

@@ -1,4 +1,4 @@
-package com.gm.trade.aspect;
+package com.miles.seed.aspect;
 
 import java.util.Date;
 

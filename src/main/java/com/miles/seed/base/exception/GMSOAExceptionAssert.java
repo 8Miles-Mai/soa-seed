@@ -1,4 +1,4 @@
-package com.gm.trade.base.exception;
+package com.miles.seed.base.exception;
 
 import java.util.Collection;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.gm.trade.base.util;
+package com.miles.seed.base.util;
 
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.gm.trade.base.exception.GMSOAException;
-import com.gm.trade.base.exception.GMSOAExceptionCode;
-import com.gm.trade.base.exception.GMSOAExceptionType;
+import com.miles.seed.base.exception.GMSOAException;
+import com.miles.seed.base.exception.GMSOAExceptionCode;
+import com.miles.seed.base.exception.GMSOAExceptionType;
 
 /**
  * @version:	  

@@ -1,4 +1,4 @@
-package com.gm.trade.hscode.remote;
+package com.miles.seed.hscode.remote;
 
 import java.util.Map;
 

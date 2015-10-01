@@ -1,4 +1,4 @@
-package com.gm.trade.manufactory.dao;
+package com.miles.seed.manufactory.dao;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.gm.trade.base.dao.BaseDao;
-import com.gm.trade.base.util.CommonUtil;
-import com.gm.trade.base.vo.PaginationVO;
-import com.gm.trade.manufactory.vo.ManufactoryVO;
+import com.miles.seed.base.dao.BaseDao;
+import com.miles.seed.base.util.CommonUtil;
+import com.miles.seed.base.vo.PaginationVO;
+import com.miles.seed.manufactory.vo.ManufactoryVO;
 
 @Repository
 public class ManufactoryDao {

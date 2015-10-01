@@ -1,6 +1,6 @@
-package com.gm.trade.manufactory.vo;
+package com.miles.seed.manufactory.vo;
 
-import com.gm.trade.base.vo.BaseVO;
+import com.miles.seed.base.vo.BaseVO;
 
 public class ManufactoryVO extends BaseVO {
 

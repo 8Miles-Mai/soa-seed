@@ -1,4 +1,4 @@
-package com.gm.trade.base.constants;
+package com.miles.seed.base.constants;
 
 /**
  * 商品交易状态常量

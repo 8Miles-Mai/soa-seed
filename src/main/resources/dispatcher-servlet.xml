@@ -17,7 +17,7 @@
 	<!-- 开启注释 -->
 	<context:annotation-config />
 
-	<context:component-scan base-package="com.gm.trade" />
+	<context:component-scan base-package="com.miles.seed" />
 
 	<!-- http 请求路由 -->
 	<!-- 根据bean的名字来找 controller 。ex：userController mapping user -->
@@ -57,12 +57,12 @@
 			</array>
 		</property>
 		<property name="webBindingInitializer">
-			<bean class="com.gm.trade.base.init.BindingInitializer" />
+			<bean class="com.miles.seed.base.init.BindingInitializer" />
 		</property>
 	</bean>
 
 	<!-- HTTP 请求结果 -->
-	<bean name="objectMapper" class="com.gm.trade.base.init.GMObjectMapper" init-method="init" />
+	<bean name="objectMapper" class="com.miles.seed.base.init.GMObjectMapper" init-method="init" />
 	<bean name="jsonView" class="org.springframework.web.servlet.view.json.MappingJacksonJsonView">
 		<property name="objectMapper" ref="objectMapper" />
 	</bean>

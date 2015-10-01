@@ -1,7 +1,7 @@
-package com.gm.trade.debug.annotation;
+package com.miles.seed.debug.annotation;
 
-import com.gm.trade.base.exception.GMSOAExceptionAssert;
-import com.gm.trade.base.exception.GMSOAExceptionCode;
+import com.miles.seed.base.exception.GMSOAExceptionAssert;
+import com.miles.seed.base.exception.GMSOAExceptionCode;
 
 /**
  * API使用方，如果方法未写明调用方, 则很有可能被清理掉，请再APIUser中注册

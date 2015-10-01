@@ -1,4 +1,4 @@
-package com.gm.trade.hscode.service;
+package com.miles.seed.hscode.service;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -10,8 +10,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractJUnit4SpringContextTests;
 
-import com.gm.trade.base.util.DateUtil;
-import com.gm.trade.hscode.remote.HscodeServiceRemote;
+import com.miles.seed.base.util.DateUtil;
+import com.miles.seed.hscode.remote.HscodeServiceRemote;
 
 @ContextConfiguration(locations={"/remote-client.xml"})
 public class SPUServiceRemoteTest extends AbstractJUnit4SpringContextTests {

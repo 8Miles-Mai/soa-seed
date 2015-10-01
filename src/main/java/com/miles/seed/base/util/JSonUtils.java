@@ -1,4 +1,4 @@
-package com.gm.trade.base.util;
+package com.miles.seed.base.util;
 
 import org.codehaus.jackson.map.ObjectMapper;
 

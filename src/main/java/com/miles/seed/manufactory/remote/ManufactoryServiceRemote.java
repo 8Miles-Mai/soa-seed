@@ -1,7 +1,7 @@
-package com.gm.trade.manufactory.remote;
+package com.miles.seed.manufactory.remote;
 
-import com.gm.trade.base.vo.PaginationVO;
-import com.gm.trade.manufactory.vo.ManufactoryVO;
+import com.miles.seed.base.vo.PaginationVO;
+import com.miles.seed.manufactory.vo.ManufactoryVO;
 
 public interface ManufactoryServiceRemote {
 	

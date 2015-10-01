@@ -1,4 +1,4 @@
-package com.gm.trade.base.constants;
+package com.miles.seed.base.constants;
 
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,4 +1,4 @@
-package com.gm.trade.aspect;
+package com.miles.seed.aspect;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
-import com.gm.trade.base.constants.EnvConstants;
+import com.miles.seed.base.constants.EnvConstants;
 
 /**
  * 监控头SOA请求，如果请求时间超长>500毫秒，则输出日志
@@ -30,7 +30,7 @@ public class VisitTimeLogAspect {
 	/** 执行报警时长，如果查过指定的时长 ，则进行日志报警 **/
 	public final static long WARNING_TIME_MILLIS_LIMITED = EnvConstants.getProperty("warning.time.millis.limited") == null ? 5000 : Long.parseLong(EnvConstants.getProperty("warning.time.millis.limited").toString()); 
 	
-	@Pointcut("(execution (* com.gm.trade.*.service.*Service.*(..))))")  
+	@Pointcut("(execution (* com.miles.seed.*.service.*Service.*(..))))")  
     public void pointcut(){}  
 	
 	

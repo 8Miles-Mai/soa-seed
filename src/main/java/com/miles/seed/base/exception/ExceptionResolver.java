@@ -1,4 +1,4 @@
-package com.gm.trade.base.exception;
+package com.miles.seed.base.exception;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

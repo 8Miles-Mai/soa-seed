@@ -1,4 +1,4 @@
-package com.gm.trade.debug;
+package com.miles.seed.debug;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -10,10 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.gm.trade.base.constants.EnvConstants;
-import com.gm.trade.base.util.DateUtil;
-import com.gm.trade.debug.vo.ApiMethod;
-import com.gm.trade.debug.vo.ApiValueObject;
+import com.miles.seed.base.constants.EnvConstants;
+import com.miles.seed.base.util.DateUtil;
+import com.miles.seed.debug.vo.ApiMethod;
+import com.miles.seed.debug.vo.ApiValueObject;
 
 @Controller
 public class APIController {

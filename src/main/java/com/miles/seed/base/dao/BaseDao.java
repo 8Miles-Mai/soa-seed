@@ -1,4 +1,4 @@
-package com.gm.trade.base.dao;
+package com.miles.seed.base.dao;
 
 import javax.annotation.Resource;
 

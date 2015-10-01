@@ -1,4 +1,4 @@
-package com.gm.trade.debug.vo;
+package com.miles.seed.debug.vo;
 
 import java.io.Serializable;
 import java.util.ArrayList;
